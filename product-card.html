@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DecoFire - Карточка товара</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top hidden-mobile">
+      <div class="container">
+        <div class="header__top-inner">
+          <a class="header__logo" href="index.html">
+            <img src="./images/logo/logo-big.png" alt="Логотип DecoFire" width="184" height="46" loading="lazy">
+          </a>
+          <form class="main-search">
+            <label class="visually-hidden" for="searchInput">Найти на сайте</label>
+            <input class="search-input" id="searchInput" type="text" placeholder="биокамин напольный">
+            <button class="search-btn button" type="submit">
+              <img src="./images/icons/magnifying.svg" alt="иконка поиска" width="16" height="16">
+            </button>
+          </form>
+          <div class="contacts-inner">
+            <address class="header-address">
+              г. Москва,<br> ул. Тимирязевская<br>
+              д 2/3 ТЦ Парк 11
+            </address>
+            <div class="header-schedule">
+              <ul class="header-schedule__list">
+                <li class="header-schedule__item">
+                  <time datetime="08:00">8.00</time> - <time datetime="22:00">22.00</time>
+                </li>
+                <li class="header-schedule__item day">
+                  ежедневно
+                </li>
+              </ul>
+              <a class="post-link" href="mailto:info@firezo.ru">info@firezo.ru</a>
+            </div>
+          </div>
+          <div class="header-soc1al">
+            <a class="phone-link" href="tel:+74951285788">+7 (495) 128-57-88</a>
+            <ul class="header-soc1al__list">
+              <li class="header-soc1al__item">
+                <a class="header-soc1al__link" href="#!" target="_blank">
+                  <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9.00309 4.87841C6.45084 4.87841 4.38459 6.94687 4.38459 9.49683C4.38459 12.049 6.45309 14.1153 9.00309 14.1153C11.5553 14.1153 13.6216 12.0468 13.6216 9.49683C13.6216 6.94462 11.5531 4.87841 9.00309 4.87841ZM9.00309 12.4945C7.34634 12.4945 6.00534 11.1528 6.00534 9.49683C6.00534 7.84086 7.34709 6.49913 9.00309 6.49913C10.6591 6.49913 12.0008 7.84086 12.0008 9.49683C12.0016 11.1528 10.6598 12.4945 9.00309 12.4945Z"
+                      fill="#8D8D8D" />
+                    <path
+                      d="M12.7112 0.556539C11.0552 0.47929 6.95342 0.48304 5.29592 0.556539C3.83942 0.624788 2.55467 0.976531 1.51892 2.01226C-0.21208 3.74323 0.00917045 6.07569 0.00917045 9.49638C0.00917045 12.9973 -0.18583 15.2758 1.51892 16.9805C3.25667 18.7175 5.62292 18.4902 9.00317 18.4902C12.4712 18.4902 13.6682 18.4925 14.8944 18.0177C16.5617 17.3705 17.8202 15.8803 17.9432 13.2036C18.0212 11.5468 18.0167 7.44592 17.9432 5.78845C17.7947 2.62875 16.0989 0.712536 12.7112 0.556539ZM15.3324 15.8353C14.1977 16.97 12.6234 16.8688 8.98142 16.8688C5.23142 16.8688 3.72767 16.9243 2.63042 15.824C1.36667 14.5663 1.59542 12.5466 1.59542 9.48438C1.59542 5.3407 1.17017 2.35651 5.32892 2.14351C6.28442 2.10976 6.56567 2.09851 8.97092 2.09851L9.00467 2.12101C13.0014 2.12101 16.1372 1.70252 16.3254 5.86045C16.3682 6.80918 16.3779 7.09417 16.3779 9.49563C16.3772 13.2021 16.4477 14.7148 15.3324 15.8353Z"
+                      fill="#8D8D8D" />
+                    <path
+                      d="M13.8045 5.77541C14.4005 5.77541 14.8837 5.29222 14.8837 4.69618C14.8837 4.10014 14.4005 3.61695 13.8045 3.61695C13.2084 3.61695 12.7252 4.10014 12.7252 4.69618C12.7252 5.29222 13.2084 5.77541 13.8045 5.77541Z"
+                      fill="#8D8D8D" />
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc1al__item">
+                <a class="header-soc1al__link" href="#!" target="_blank">
+                  <svg width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.7666 6.80771C15.4594 6.42271 15.5473 6.25143 15.7666 5.90729C15.7705 5.90336 18.3063 2.42579 18.5676 1.24643L18.5692 1.24564C18.699 0.815857 18.5692 0.5 17.9414 0.5H15.864C15.3351 0.5 15.0913 0.771071 14.9606 1.07436C14.9606 1.07436 13.9029 3.58707 12.4066 5.21586C11.9237 5.6865 11.7004 5.83736 11.4368 5.83736C11.307 5.83736 11.1051 5.6865 11.1051 5.25671V1.24564C11.1051 0.730214 10.957 0.5 10.5192 0.5H7.25271C6.92099 0.5 6.72386 0.740429 6.72386 0.964357C6.72386 1.45307 7.47201 1.56543 7.5496 2.94043V5.92379C7.5496 6.5775 7.43005 6.69771 7.16483 6.69771C6.45864 6.69771 4.74462 4.17479 3.72888 1.28729C3.52383 0.727071 3.32353 0.500786 2.79072 0.500786H0.712525C0.119546 0.500786 0 0.771857 0 1.07514C0 1.611 0.706191 4.27536 3.28395 7.79536C5.00192 10.1981 7.42134 11.5 9.62225 11.5C10.9452 11.5 11.1067 11.2109 11.1067 10.7135C11.1067 8.41764 10.9871 8.20079 11.6498 8.20079C11.957 8.20079 12.4858 8.35164 13.7208 9.51057C15.1324 10.8848 15.3644 11.5 16.1545 11.5H18.2319C18.8241 11.5 19.1242 11.2109 18.9516 10.6404C18.5565 9.44064 15.8869 6.97271 15.7666 6.80771Z"
+                      fill="#8D8D8D" />
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc1al__item">
+                <a class="header-soc1al__link" href="#!" target="_blank">
+                  <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M15.4453 3.12738C13.7457 1.43398 11.4855 0.500993 9.07751 0.5C4.1157 0.5 0.0775041 4.51876 0.0755083 9.45816C0.074843 11.0371 0.489307 12.5785 1.2771 13.9371L0 18.5794L4.7721 17.3336C6.08701 18.0474 7.56735 18.4236 9.07385 18.424H9.07762C14.0389 18.424 18.0775 14.4049 18.0794 9.46533C18.0804 7.07144 17.1449 4.82067 15.4453 3.12738ZM9.07751 16.9111H9.07441C7.73189 16.9105 6.41521 16.5514 5.26629 15.8731L4.99319 15.7117L2.16135 16.451L2.91721 13.7032L2.73925 13.4215C1.99027 12.2359 1.59477 10.8656 1.59543 9.45871C1.59698 5.35321 4.9535 2.01309 9.08051 2.01309C11.079 2.01375 12.9576 2.78928 14.3702 4.19677C15.7828 5.60425 16.5603 7.47509 16.5596 9.46478C16.5578 13.5706 13.2015 16.9111 9.07751 16.9111ZM13.1816 11.3342C12.9567 11.2221 11.8508 10.6807 11.6446 10.6059C11.4386 10.5312 11.2884 10.494 11.1386 10.718C10.9886 10.942 10.5576 11.4463 10.4264 11.5956C10.2951 11.745 10.164 11.7638 9.93904 11.6517C9.71407 11.5396 8.98936 11.3032 8.13017 10.5406C7.46157 9.947 7.01018 9.21396 6.8789 8.98995C6.74784 8.76572 6.87779 8.65626 6.97758 8.53311C7.22107 8.23219 7.4649 7.91671 7.53985 7.76741C7.61491 7.61799 7.57733 7.48723 7.521 7.37523C7.4649 7.26323 7.01506 6.1614 6.82768 5.71306C6.64495 5.27674 6.45967 5.33567 6.32152 5.32883C6.19046 5.32232 6.04044 5.32099 5.89042 5.32099C5.74051 5.32099 5.4968 5.37694 5.29057 5.60116C5.08444 5.82528 4.50344 6.36676 4.50344 7.46858C4.50344 8.57041 5.30942 9.63482 5.42185 9.78424C5.53428 9.93365 7.00797 12.1947 9.26423 13.1642C9.80088 13.395 10.2198 13.5326 10.5465 13.6358C11.0854 13.8062 11.5756 13.7821 11.9632 13.7245C12.3954 13.6602 13.2939 13.183 13.4815 12.6601C13.6689 12.1372 13.6689 11.6891 13.6126 11.5956C13.5565 11.5022 13.4064 11.4463 13.1816 11.3342Z"
+                      fill="#8D8D8D" />
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc1al__item">
+                <a class="header-soc1al__link" href="#!" target="_blank">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.88588 9.06787L5.63775 12.6975C5.99276 12.6975 6.14651 12.5389 6.33089 12.3484L7.9953 10.6942L11.4441 13.3208C12.0767 13.6874 12.5223 13.4943 12.6929 12.7157L14.9567 1.68391L14.9573 1.68326C15.158 0.710862 14.6192 0.330614 14.0029 0.569163L0.696378 5.86729C-0.211769 6.23388 -0.198019 6.76038 0.541999 6.99893L3.94396 8.09937L11.846 2.95725C12.2179 2.70115 12.556 2.84285 12.2779 3.09895L5.88588 9.06787Z"
+                      fill="#8D8D8D" />
+                  </svg>
+                </a>
+              </li>
+              <li class="header-soc1al__item">
+                <a class="header-soc1al__link" href="#!" target="_blank">
+                  <svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M17.7013 11.8045C18.2833 6.90508 17.4216 3.81196 15.8673 2.41295L15.8682 2.41213C13.3595 0.0229914 4.88737 -0.330624 1.88611 2.51944C0.538306 3.91358 0.0635668 5.95967 0.0115405 8.4927C-0.0404857 11.0265 -0.102267 15.7731 4.32078 17.0608H4.32484L4.32078 19.0272C4.32078 19.0272 4.2907 19.8238 4.79958 19.984C5.38162 20.1726 5.64501 19.8027 7.45536 17.6404C10.4826 17.9029 12.8076 17.3014 13.0718 17.2136C13.6831 17.0087 17.142 16.5511 17.7013 11.8045ZM7.75369 16.2568C7.75369 16.2568 5.83767 18.6459 5.2418 19.2662C5.0467 19.4678 4.83291 19.4491 4.83616 19.0491C4.83616 18.7866 4.85079 15.7845 4.85079 15.7845C1.10084 14.7098 1.32195 10.668 1.3626 8.55367C1.40324 6.43847 1.79019 4.70616 2.93151 3.53964C5.56453 1.07083 12.9921 1.6228 14.8845 3.40144C17.1981 5.45241 16.3746 11.2468 16.3795 11.4444C15.9039 15.4065 13.101 15.6577 12.5856 15.8292C12.3653 15.9024 10.3209 16.4283 7.75369 16.2568Z"
+                      fill="#8D8D8D" />
+                    <path
+                      d="M8.81383 4.00383C8.50086 4.00383 8.50086 4.49158 8.81383 4.49564C11.242 4.51434 13.2417 6.20682 13.2637 9.31132C13.2637 9.63892 13.7433 9.63486 13.7392 9.30725H13.7384C13.7124 5.96213 11.5289 4.02253 8.81383 4.00383Z"
+                      fill="#8D8D8D" />
+                    <path
+                      d="M12.0078 8.7967C12.0005 9.12024 12.4793 9.13569 12.4834 8.80809C12.5232 6.96359 11.386 5.44427 9.24881 5.28412C8.93584 5.26136 8.90332 5.75317 9.21548 5.77593C11.0689 5.91657 12.0452 7.18145 12.0078 8.7967Z"
+                      fill="#8D8D8D" />
+                    <path
+                      d="M11.4957 10.8948C11.0941 10.6624 10.6853 10.807 10.5162 11.0355L10.1625 11.4931C9.9829 11.7256 9.64716 11.6947 9.64716 11.6947C7.19705 11.0469 6.54185 8.48294 6.54185 8.48294C6.54185 8.48294 6.51177 8.13583 6.73613 7.94967L7.17835 7.58386C7.39947 7.40827 7.53929 6.98556 7.31411 6.57016C6.71256 5.4833 6.30854 5.10855 6.10287 4.82078C5.88664 4.55008 5.56147 4.48912 5.2233 4.67202H5.21599C4.51282 5.08335 3.74299 5.85318 3.98931 6.64576C4.40958 7.48144 5.18184 10.1453 7.64334 12.1581C8.80011 13.11 10.6308 14.0855 11.4079 14.3107L11.4152 14.3221C12.181 14.5773 12.9256 13.7774 13.3231 13.0531V13.0474C13.4995 12.6971 13.441 12.3654 13.1833 12.1484C12.7265 11.7029 12.0371 11.2111 11.4957 10.8948Z"
+                      fill="#8D8D8D" />
+                    <path
+                      d="M9.58326 7.0985C10.3645 7.14403 10.7433 7.55211 10.7839 8.39022C10.7985 8.71782 11.2741 8.69506 11.2595 8.36746C11.2074 7.27328 10.6368 6.66359 9.60927 6.60669C9.2963 6.58799 9.26704 7.07981 9.58326 7.0985Z"
+                      fill="#8D8D8D" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <a class="favourites-btn" href="#" target="_blank">
+            <img class="flag-img" src="./images/icons/flag.svg" alt="иконка флажок">
+            <img class="star-img" src="./images/icons/star.svg" alt="иконка звезда">
+            Избранное
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu">
+      <div class="container">
+        <nav class="header-nav hidden-mobile">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <button class="catalog-btn button" type="button" onclick="catalogDesktop.showModal()">
+                <span class="visually-hidden">Открыть Каталог</span>
+                <img class="catalog-img" src="./images/icons/catalog.svg" alt="">
+                КАТАЛОГ
+              </button>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="toorder.html">На заказ</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="about.html">О нас</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#">Наши работы</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="collaboration.html">Сотрудничество</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="where-buy.html">Где купить</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="contacts.html">Контакты</a>
+            </li>
+            <li class="header-nav__item towns-link">
+              <a class="header-nav__link" href="#" onclick="citiesList.showModal()">Москва</a>
+              <img class="towns-link-img" src="./images/icons/down.svg" alt="стрелка вниз">
+            </li>
+          </ul>
+        </nav>
+        <div class="top-menu visible-mobile">
+          <nav class="top-nav">
+            <ul class="top-menu__list">
+              <li class="top-menu__item">
+                <a class="top-menu__link" href="index.html">
+                  <img src="./images/logo/logo-small.svg" alt="логотип DecoFire" width="111" height="28">
+                </a>
+              </li>
+              <li class="top-menu__item towns-link">
+                <a class="top-menu__link" href="#" onclick="citiesList.showModal()">Москва</a>
+                <img class="towns-link-img" src="./images/icons/down.svg" alt="стрелка вниз">
+              </li>
+              <li class="top-menu__item">
+                <a class="top-menu__link" href="#">
+                  <img src="./images/icons/search-icon.svg" alt="иконка поиска" width="18" height="18">
+                </a>
+              </li>
+              <li class="top-menu__item">
+                <button class="burger-menu button" type="button" onclick="mobileOverlay.showModal()">
+                  <span class="visually-hidden">Открыть меню навигации</span>
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                  <span class="burger-line"></span>
+                  <img src="./images/icons/burger.svg" alt="" title="Открыть меню">
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="article">
+      <div class="container">
+        <div class="chips">
+          <a class="chips__link--home" href="index.html">
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.0678 5.54093L7.04138 0.624611C7.03494 0.618283 7.02826 0.612142 7.02146 0.606189C6.4726 0.127338 5.64322 0.125627 5.09226 0.602228C5.08541 0.608158 5.07875 0.614275 5.07226 0.620556L0 5.5395L0.681547 6.20309L1.06439 5.83182V11.7541H4.73069C4.99713 11.7541 5.2131 11.5442 5.2131 11.2853V7.46503H6.90153V11.2853C6.90153 11.5442 7.11751 11.7541 7.38394 11.7541H11.002C11.002 11.7541 11.002 10.913 11.002 9.8791C11.002 9.62021 10.786 9.41035 10.5196 9.41035C10.2532 9.41035 10.0372 9.62021 10.0372 9.8791C10.0372 10.396 10.0372 10.4414 10.0372 10.8166H7.86635V6.99628C7.86635 6.73739 7.65038 6.52753 7.38394 6.52753H4.73069C4.46426 6.52753 4.24829 6.73739 4.24829 6.99628V10.8166H2.0292V4.91035C2.0292 4.90566 2.02913 4.90099 2.02899 4.89635L5.74245 1.29516C5.92318 1.14603 6.18827 1.14659 6.3683 1.29645L10.0372 4.88496V10C10.0372 10.2589 10.2532 10.0041 10.5196 10.0041C10.786 10.0041 11.002 11.8519 11.002 11.593V5.82863L11.3834 6.20168L12.0678 5.54093Z" fill="#555555"/>
+            </svg>
+          </a>
+          <img src="./images/icons/chevron-right.svg" alt="стрелка вправо" width="5" height="6" loading="lazy">
+          <a class="chips__link--catalog" href="#">Статьи</a>
+          <img src="./images/icons/chevron-right.svg" alt="стрелка вправо" width="5" height="6" loading="lazy">
+          <p>Напольный биокамин Firezo Minimal 600</p>
+        </div>
+        <div class="article__card">
+          <div class="article__slider">
+            <div class="swiper article-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide article-slide" 
+                style="background: url('./images/article/Firezo-Minimal-600.png') center/cover no-repeat;"></div>
+                <div class="swiper-slide article-slide" 
+                style="background: url('./images/article/Firezo-Minimal-600.png') center/cover no-repeat;"></div>
+                <div class="swiper-slide article-slide" 
+                style="background: url('./images/article/Firezo-Minimal-600.png') center/cover no-repeat;"></div>
+                <div class="swiper-slide article-slide" 
+                style="background: url('./images/article/Firezo-Minimal-600.png') center/cover no-repeat;"></div>
+                <div class="swiper-slide article-slide" 
+                style="background: url('./images/article/Firezo-Minimal-600.png') center/cover no-repeat;"></div>
+              </div>
+            </div>
+            <div class="swiper-button-next article-slider-button-next">
+              <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="63" height="63" rx="5" fill="#FBFBFB" />
+                <path d="M17 35H46L38.75 26" stroke="#FF5710" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="swiper-button-prev article-slider-button-prev">
+              <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M46 35H17L24.25 26" stroke="#8B8B8B" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="article-slider-pagination"></div>
+          </div>
+          <div class="article__description">
+            <div class="article__description-title">
+              <div class="notification">
+                <span>В наличии</span>
+              </div>
+              <h1>Напольный биокамин Firezo Minimal 600</h1>
+            </div>
+            <div class="article__description-body">
+              <p>При горении топливо не выделяет вредных для здоровья газов, что полностью оправдывает приставку био.</p>
+            </div>
+            <div class="article__description-price">
+              <div class="description-price__discount">
+                <div class="description-price__discount-content">-25%</div> 
+              </div>
+              <p class="description-price__current">9 000 ₽</p>
+              <p class="description-price__not-relevant">12 000 ₽</p>
+            </div>
+            <div class="article__button-panel">
+              <div class="button-panel__top">
+                <button class="purchase-button button" type="submit">Купить</button>
+                <button class="favorites-button button" type="button">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="white"/>
+                    <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                  </svg>
+                </button>
+                <button class="nevedomaya-huyna-button button" type="button">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.6267 10.9438L11.459 18.8957L24.0349 26.4563" stroke="black" stroke-width="1.6" />
+                    <circle cx="11.459" cy="19.2124" r="2.2" fill="white" stroke="black" stroke-width="1.6" />
+                    <circle cx="23.707" cy="10.6167" r="2.2" fill="white" stroke="black" stroke-width="1.6" />
+                    <circle cx="23.707" cy="26.1292" r="2.2" fill="white" stroke="black" stroke-width="1.6" />
+                  </svg>
+                </button>
+              </div>
+              <div class="button-panel__centr">
+                <button class="installment-button button" type="button">Рассрочка</button>
+                <button class="сhoose-bio-fireplace-button button" type="button">Подобрать биокамин</button>
+              </div>
+              <div class="button-panel__bottom">
+                <p>Задать вопрос</p>
+                <ul class="article__soc1al-list">
+                  <li class="article__soc1al-item">
+                    <a class="article__soc1al-link" href="#" target="_blank">
+                      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22.5" stroke="#EFEFEF"/>
+                        <path d="M28.1899 24.1769C27.9135 23.8304 27.9926 23.6763 28.1899 23.3666C28.1935 23.363 30.4757 20.2332 30.7108 19.1718L30.7123 19.1711C30.8291 18.7843 30.7123 18.5 30.1472 18.5H28.2776C27.8016 18.5 27.5821 18.744 27.4646 19.0169C27.4646 19.0169 26.5126 21.2784 25.166 22.7443C24.7313 23.1678 24.5304 23.3036 24.2931 23.3036C24.1763 23.3036 23.9946 23.1678 23.9946 22.781V19.1711C23.9946 18.7072 23.8613 18.5 23.4673 18.5H20.5274C20.2289 18.5 20.0515 18.7164 20.0515 18.9179C20.0515 19.3578 20.7248 19.4589 20.7946 20.6964V23.3814C20.7946 23.9697 20.687 24.0779 20.4483 24.0779C19.8128 24.0779 18.2702 21.8073 17.356 19.2086C17.1714 18.7044 16.9912 18.5007 16.5116 18.5007H14.6413C14.1076 18.5007 14 18.7447 14 19.0176C14 19.4999 14.6356 21.8978 16.9556 25.0658C18.5017 27.2283 20.6792 28.4 22.66 28.4C23.8507 28.4 23.996 28.1398 23.996 27.6921C23.996 25.6259 23.8884 25.4307 24.4848 25.4307C24.7613 25.4307 25.2372 25.5665 26.3488 26.6095C27.6192 27.8463 27.828 28.4 28.5391 28.4H30.4087C30.9417 28.4 31.2117 28.1398 31.0564 27.6264C30.7009 26.5466 28.2982 24.3254 28.1899 24.1769Z" fill="#8A8B90"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="article__soc1al-item">
+                    <a class="article__soc1al-link" href="#" target="_blank">
+                      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22.5" stroke="#EFEFEF"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8011 17.2644C27.2715 15.7404 25.2373 14.9007 23.0702 14.8998C18.6045 14.8998 14.9701 18.5167 14.9683 22.9621C14.9677 24.3832 15.3408 25.7704 16.0498 26.9931L14.9004 31.1712L19.1953 30.05C20.3787 30.6925 21.711 31.031 23.0669 31.0314H23.0703C27.5354 31.0314 31.1702 27.4142 31.1719 22.9686C31.1728 20.8141 30.3308 18.7884 28.8011 17.2644ZM23.0702 29.6697H23.0674C21.8591 29.6692 20.6741 29.3461 19.64 28.7356L19.3943 28.5903L16.8456 29.2557L17.5259 26.7827L17.3657 26.5291C16.6916 25.4621 16.3357 24.2289 16.3363 22.9626C16.3377 19.2677 19.3585 16.2616 23.0728 16.2616C24.8715 16.2622 26.5622 16.9601 27.8336 18.2269C29.1049 19.4936 29.8046 21.1774 29.804 22.9681C29.8024 26.6633 26.7818 29.6697 23.0702 29.6697ZM26.7638 24.6505C26.5614 24.5496 25.5661 24.0624 25.3805 23.9951C25.1951 23.9278 25.06 23.8944 24.9252 24.096C24.7901 24.2976 24.4023 24.7514 24.2841 24.8858C24.166 25.0203 24.048 25.0372 23.8455 24.9363C23.6431 24.8355 22.9908 24.6226 22.2175 23.9363C21.6158 23.4021 21.2096 22.7423 21.0914 22.5407C20.9735 22.3389 21.0904 22.2404 21.1802 22.1296C21.3994 21.8588 21.6188 21.5748 21.6863 21.4404C21.7538 21.306 21.72 21.1883 21.6693 21.0875C21.6188 20.9867 21.2139 19.995 21.0453 19.5915C20.8808 19.1988 20.7141 19.2519 20.5898 19.2457C20.4718 19.2399 20.3368 19.2387 20.2018 19.2387C20.0669 19.2387 19.8475 19.289 19.6619 19.4908C19.4764 19.6925 18.9535 20.1799 18.9535 21.1715C18.9535 22.1631 19.6789 23.1211 19.7801 23.2556C19.8812 23.3901 21.2076 25.425 23.2382 26.2976C23.7212 26.5053 24.0982 26.6292 24.3923 26.722C24.8773 26.8754 25.3184 26.8537 25.6673 26.8019C26.0563 26.744 26.8649 26.3144 27.0337 25.8439C27.2024 25.3732 27.2024 24.9699 27.1517 24.8858C27.1012 24.8018 26.9662 24.7514 26.7638 24.6505Z" fill="#8A8B90"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="article__soc1al-item">
+                    <a class="article__soc1al-link" href="#" target="_blank">
+                      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22.5" stroke="#EFEFEF"/>
+                        <path d="M20.8859 25.2269L20.6377 29.1357C20.9928 29.1357 21.1465 28.9649 21.3309 28.7598L22.9953 26.9783L26.4441 29.807C27.0767 30.2018 27.5223 29.9939 27.6929 29.1553L29.9567 17.275L29.9573 17.2743C30.158 16.2271 29.6192 15.8176 29.0029 16.0745L15.6964 21.7802C14.7882 22.175 14.802 22.7419 15.542 22.9988L18.944 24.1839L26.846 18.6463C27.2179 18.3705 27.556 18.5231 27.2779 18.7989L20.8859 25.2269Z" fill="#8A8B90"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="article__soc1al-item">
+                    <a class="article__soc1al-link" href="#" target="_blank">
+                      <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="23" cy="23" r="22.5" stroke="#EFEFEF"/>
+                        <path d="M31.8315 25.174C32.3554 20.7646 31.5799 17.9808 30.181 16.7217L30.1817 16.7209C27.924 14.5707 20.299 14.2524 17.5979 16.8175C16.3849 18.0722 15.9576 19.9137 15.9108 22.1934C15.864 24.4739 15.8084 28.7458 19.7891 29.9047H19.7927L19.7891 31.6745C19.7891 31.6745 19.762 32.3915 20.22 32.5356C20.7439 32.7053 20.9809 32.3724 22.6102 30.4263C25.3348 30.6626 27.4272 30.1212 27.665 30.0422C28.2151 29.8579 31.3282 29.446 31.8315 25.174ZM22.8787 29.1811C22.8787 29.1811 21.1543 31.3313 20.618 31.8896C20.4424 32.071 20.25 32.0542 20.2529 31.6942C20.2529 31.4579 20.2661 28.756 20.2661 28.756C16.8911 27.7888 17.0901 24.1512 17.1267 22.2483C17.1633 20.3446 17.5116 18.7855 18.5388 17.7357C20.9085 15.5137 27.5933 16.0105 29.2965 17.6113C31.3787 19.4572 30.6375 24.6722 30.6419 24.8499C30.2139 28.4158 27.6913 28.6419 27.2275 28.7963C27.0292 28.8621 25.1892 29.3355 22.8787 29.1811Z" fill="#8A8B90"/>
+                        <path d="M23.8323 18.1535C23.5507 18.1535 23.5507 18.5925 23.8323 18.5961C26.0177 18.613 27.8175 20.1362 27.8372 22.9302C27.8372 23.2251 28.2689 23.2214 28.2652 22.9266H28.2645C28.2411 19.916 26.2759 18.1703 23.8323 18.1535Z" fill="#8A8B90"/>
+                        <path d="M26.7058 22.4663C26.6992 22.7575 27.1301 22.7714 27.1338 22.4766C27.1696 20.8165 26.1461 19.4491 24.2227 19.305C23.941 19.2845 23.9117 19.7272 24.1927 19.7476C25.8608 19.8742 26.7394 21.0126 26.7058 22.4663Z" fill="#8A8B90"/>
+                        <path d="M26.2472 24.3558C25.8858 24.1465 25.5178 24.2768 25.3656 24.4823L25.0474 24.8942C24.8857 25.1035 24.5835 25.0757 24.5835 25.0757C22.3784 24.4926 21.7887 22.1851 21.7887 22.1851C21.7887 22.1851 21.7617 21.8727 21.9636 21.7051L22.3616 21.3759C22.5606 21.2179 22.6864 20.8374 22.4838 20.4636C21.9424 19.4854 21.5788 19.1481 21.3937 18.8891C21.199 18.6455 20.9064 18.5906 20.602 18.7552H20.5955C19.9626 19.1254 19.2698 19.8183 19.4914 20.5316C19.8697 21.2837 20.5647 23.6812 22.7801 25.4927C23.8212 26.3494 25.4688 27.2274 26.1682 27.43L26.1748 27.4403C26.864 27.67 27.5341 26.9501 27.8919 26.2982V26.2931C28.0507 25.9778 27.998 25.6793 27.7661 25.4839C27.3549 25.083 26.7345 24.6404 26.2472 24.3558Z" fill="#8A8B90"/>
+                        <path d="M24.5253 20.938C25.2284 20.979 25.5693 21.3463 25.6059 22.1006C25.619 22.3954 26.047 22.3749 26.0339 22.0801C25.987 21.0953 25.4734 20.5466 24.5487 20.4954C24.267 20.4786 24.2407 20.9212 24.5253 20.938Z" fill="#8A8B90"/>
+                      </svg>
+                    </a>
+                  </li> 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popular">
+      <div class="container">
+        <h2 class="popular__title section-title">Популярные биокамины</h2>
+        <div class="popular__slider">
+          <div class="swiper popular-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/01.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/02.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/03.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/01.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/02.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/03.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/01.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/02.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide popular-slide">
+                <div class="product-card__wrapper">
+                  <div class="product-card__image">
+                    <img src="./images/product-card/03.png" alt="биокамин" width="356" height="316" loading="lazy">
+                    <button class="favourites-icon-button button" type="button">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="30" fill="white"/>
+                        <path d="M33.3755 26.4902L33.5628 26.858L33.9712 26.9185L40.3097 27.8575L35.7776 32.3872L35.4856 32.6791L35.5543 33.0861L36.62 39.4046L30.9114 36.4941L30.5436 36.3066L30.1777 36.4977L24.4979 39.4638L25.5019 33.1351L25.5665 32.7274L25.2717 32.4385L20.6957 27.9532L27.0247 26.9524L27.4325 26.888L27.6162 26.5183L30.4679 20.7801L33.3755 26.4902Z" stroke="#808080" stroke-width="1.6"/>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="product-card__info">
+                    <div class="product-card__title">
+                      <h3>Топливный блок Биокамина Decofire Burner 1400...</h3>
+                    </div>
+                    <div class="product-card__price">
+                      <p class="product-card__price--current">23 000 ₽</p>
+                      <p class="product-card__price--not-relevant">23 000 ₽</p>
+                    </div>
+                    <a class="product-card__link" href="product-card.html" target="_blank">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next popular-slider-button-next">
+            <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="63" height="63" rx="5" fill="#FBFBFB" />
+              <path d="M17 35H46L38.75 26" stroke="#FF5710" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="swiper-button-prev popular-slider-button-prev">
+            <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M46 35H17L24.25 26" stroke="#8B8B8B" stroke-width="2" />
+            </svg>
+          </div>
+          <div class="popular-slider-pagination"></div>
+        </div>
+      </div>
+    </section>
+    <section class="art">
+      <div class="container">
+        <div class="art__wrapper">
+          <div class="art__top">
+            <div class="art__top-info">
+              <h2>Заголовок в несколько слов</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur purus phasellus sem elit a. Varius lectus iaculis sed sollicitudin metus non amet, leo. Non arcu ac molestie</p>
+              <a href="about.html">Подробнее о компании</a>
+            </div>
+            <div class="art__numbers">
+              <div class="art__numbers--top">
+                <h3>1500</h3>
+                <p>Реализованных<br> проектов</p>
+              </div>
+              <div class="art__numbers--bottom">
+                <h3>28</h3>
+                <p>Региональных<br> дилеров</p>
+              </div>
+              <img class="art__numbers-image--desktop" src="./images/art/art-fierplace-big.png" alt="подвесной биокамин" width="655" height="780" loading="lazy">
+              <img class="art__numbers-image--mobile" src="./images/art/art-fierplace-small.png" alt="подвесной биокамин" width="204" height="259" loading="lazy">
+            </div>
+          </div>
+          <div class="art__bottom">
+            <div class="art__bottom-info">
+              <img src="./images/art/art-logo.png" alt="DecoFire" width="166" height="29" loading="lazy">
+              <p>Огонь как искусство</p>
+            </div>
+            <div class="art__bottom-image">
+              <img src="./images/art/art-bottom.png" alt="интерьер с камином" width="385" height="192" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-body">
+        <ul class="footer-body__top-list visible-mobile">
+          <li class="footer-body__top-item">
+            <details class="footer__accordion">
+              <summary class="footer__accordion-header">
+                <h3 class="footer__accordion-title">Каталог</h3>
+                <img class="footer__accordion-initializer" src="./images/icons/arrow-down.svg" alt="кнопка стрелка">
+              </summary>
+              <div class="footer__accordion-body">
+                <ul class="footer-body__column-list">
+                  <li class="footer-body__column-item">
+                    <a class="footer-body__column-link" href="listing.html">Настенные биокамины</a>
+                  </li>
+                  <li class="footer-body__column-item">
+                    <a class="footer-body__column-link" href="listing.html">Торцевые биокамины</a>
+                  </li>
+                  <li class="footer-body__column-item">
+                    <a class="footer-body__column-link" href="listing.html">Встраиваемые биокамины</a>
+                  </li>
+                  <li class="footer-body__column-item">
+                    <a class="footer-body__column-link" href="listing.html">Островные биокамины</a>
+                  </li>
+                  <li class="footer-body__column-item">
+                    <a class="footer-body__column-link" href="listing.html">Камины на заказ</a>
+                  </li>
+                  <li class="footer-body__column-item">
+                    <a class="footer-body__column-link" href="listing.html">Аксессуары и биотопливо</a>
+                  </li>
+                </ul>
+              </div>
+            </details>
+          </li>
+          <li class="footer-body__top-item">
+            <details class="footer__accordion">
+              <summary class="footer__accordion-header">
+                <h3 class="footer__accordion-title">Покупателям</h3>
+                <img class="footer__accordion-initializer" src="./images/icons/arrow-down.svg" alt="кнопка стрелка">
+              </summary>
+              <div class="footer__accordion-body">
+                <nav class="footer-nav">
+                  <ul class="footer-body__column-list">
+                    <li class="footer-body__column-item">
+                      <a class="footer-body__column-link" href="about.html">О нас</a>
+                    </li>
+                    <li class="footer-body__column-item">
+                      <a class="footer-body__column-link" href="#" onclick="catalogDesktop.showModal()">Каталог</a>
+                    </li>
+                    <li class="footer-body__column-item">
+                      <a class="footer-body__column-link" href="collaboration.html">Сотрудничество</a>
+                    </li>
+                    <li class="footer-body__column-item">
+                      <a class="footer-body__column-link" href="#">Статьи</a>
+                    </li>
+                    <li class="footer-body__column-item">
+                      <a class="footer-body__column-link" href="where-buy.html">Где купить</a>
+                    </li>
+                    <li class="footer-body__column-item">
+                      <a class="footer-body__column-link" href="contacts.html">Контакты</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </details>
+          </li>
+        </ul>
+        <div class="footer-body__column">
+          <a class="footer-logo" href="index.html">
+            <img class="footer-logo-img" src="./images/logo/logo-big.png" alt="логотип DecoFire" width="184"
+              height="46">
+          </a>
+          <a class="post-link footer-info" href="mailto:info@firezo.ru">
+            <img class="post-link-img" src="./images/icons/post.svg" alt="почтовый конверт" width="11" height="12"
+              loading="lazy">
+            info@firezo.ru
+          </a>
+          <address class="footer-address">
+            г. Москва,<br> ул. Тимирязевская<br>
+            д 2/3 ТЦ Парк 11
+          </address>
+        </div>
+        <div class="footer-body__column hidden-mobile">
+          <h2 class="footer-body__column-title">Каталог</h2>
+          <ul class="footer-body__column-list">
+            <li class="footer-body__column-item">
+              <a class="footer-body__column-link" href="listing.html">Настенные биокамины</a>
+            </li>
+            <li class="footer-body__column-item">
+              <a class="footer-body__column-link" href="listing.html">Торцевые биокамины</a>
+            </li>
+            <li class="footer-body__column-item">
+              <a class="footer-body__column-link" href="listing.html">Встраиваемые биокамины</a>
+            </li>
+            <li class="footer-body__column-item">
+              <a class="footer-body__column-link" href="listing.html">Островные биокамины</a>
+            </li>
+            <li class="footer-body__column-item">
+              <a class="footer-body__column-link" href="listing.html">Камины на заказ</a>
+            </li>
+            <li class="footer-body__column-item">
+              <a class="footer-body__column-link" href="listing.html">Аксессуары и биотопливо</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-body__column hidden-mobile">
+          <h2 class="footer-body__column-title">Покупателям</h2>
+          <nav class="footer-nav">
+            <ul class="footer-body__column-list">
+              <li class="footer-body__column-item">
+                <a class="footer-body__column-link" href="about.html">О нас</a>
+              </li>
+              <li class="footer-body__column-item">
+                <a class="footer-body__column-link" href="#" onclick="catalogDesktop.showModal()">Каталог</a>
+              </li>
+              <li class="footer-body__column-item">
+                <a class="footer-body__column-link" href="collaboration.html">Сотрудничество</a>
+              </li>
+              <li class="footer-body__column-item">
+                <a class="footer-body__column-link" href="#">Статьи</a>
+              </li>
+              <li class="footer-body__column-item">
+                <a class="footer-body__column-link" href="where-buy.html">Где купить</a>
+              </li>
+              <li class="footer-body__column-item">
+                <a class="footer-body__column-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-body__column footer-soc1al">
+          <h3 class="mobile-overlay__title-phone">+7 (495) 128-57-88</h3>
+          <a class="mobile-overlay__link-phone" href="tel:+74951285788">Позвонить</a>
+          <ul class="mobile-soc1al__list">
+            <li class="mobile-soc1al__item">
+              <a class="mobile-soc1al__link footer-soc1al__link" href="#" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.00318 4.83998C6.70615 4.83998 4.84652 6.7016 4.84652 8.99656C4.84652 11.2936 6.70817 13.1531 9.00318 13.1531C11.3002 13.1531 13.1598 11.2915 13.1598 8.99656C13.1598 6.69958 11.2982 4.83998 9.00318 4.83998ZM9.00318 11.6945C7.5121 11.6945 6.3052 10.4869 6.3052 8.99656C6.3052 7.50619 7.51277 6.29863 9.00318 6.29863C10.4936 6.29863 11.7012 7.50619 11.7012 8.99656C11.7018 10.4869 10.4943 11.6945 9.00318 11.6945Z"
+                    fill="#8A8B90" />
+                  <path
+                    d="M12.3404 0.950299C10.85 0.880775 7.15847 0.88415 5.66672 0.950299C4.35587 1.01172 3.19959 1.32829 2.26742 2.26045C0.709519 3.81832 0.908644 5.91754 0.908644 8.99616C0.908644 12.147 0.733144 14.1976 2.26742 15.7319C3.83139 17.2951 5.96102 17.0906 9.00325 17.0906C12.1244 17.0906 13.2017 17.0926 14.3054 16.6654C15.8059 16.0829 16.9385 14.7417 17.0492 12.3326C17.1194 10.8416 17.1154 7.15074 17.0492 5.65902C16.9156 2.81529 15.3894 1.0907 12.3404 0.950299ZM14.6996 14.7012C13.6783 15.7224 12.2615 15.6313 8.98367 15.6313C5.60867 15.6313 4.2553 15.6812 3.26777 14.691C2.13039 13.5591 2.33627 11.7413 2.33627 8.98536C2.33627 5.25605 1.95354 2.57027 5.69642 2.37857C6.55637 2.3482 6.8095 2.33807 8.97422 2.33807L9.0046 2.35832C12.6017 2.35832 15.4238 1.98168 15.5933 5.72382C15.6317 6.57768 15.6405 6.83417 15.6405 8.99548C15.6398 12.3313 15.7033 13.6927 14.6996 14.7012Z"
+                    fill="#8A8B90" />
+                  <path
+                    d="M13.3244 5.64728C13.8608 5.64728 14.2957 5.21242 14.2957 4.67598C14.2957 4.13954 13.8608 3.70467 13.3244 3.70467C12.788 3.70467 12.3531 4.13954 12.3531 4.67598C12.3531 5.21242 12.788 5.64728 13.3244 5.64728Z"
+                    fill="#8A8B90" />
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-soc1al__item">
+              <a class="mobile-soc1al__link footer-soc1al__link" href="#" target="_blank">
+                <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.1899 6.17694C13.9135 5.83044 13.9926 5.67629 14.1899 5.36656C14.1935 5.36302 16.4757 2.23321 16.7108 1.17179L16.7123 1.17108C16.8291 0.784271 16.7123 0.5 16.1472 0.5H14.2776C13.8016 0.5 13.5821 0.743964 13.4646 1.01692C13.4646 1.01692 12.5126 3.27836 11.166 4.74427C10.7313 5.16785 10.5304 5.30362 10.2931 5.30362C10.1763 5.30362 9.99458 5.16785 9.99458 4.78104V1.17108C9.99458 0.707193 9.86134 0.5 9.46732 0.5H6.52744C6.22889 0.5 6.05147 0.716386 6.05147 0.917921C6.05147 1.35776 6.72481 1.45889 6.79464 2.69639V5.38141C6.79464 5.96975 6.68704 6.07794 6.44835 6.07794C5.81278 6.07794 4.27016 3.80731 3.35599 1.20856C3.17145 0.704364 2.99118 0.500707 2.51165 0.500707H0.641272C0.107591 0.500707 0 0.744671 0 1.01763C0 1.4999 0.635572 3.89782 2.95555 7.06582C4.50173 9.22826 6.67921 10.4 8.66003 10.4C9.85065 10.4 9.99601 10.1398 9.99601 9.69215C9.99601 7.62588 9.88842 7.43071 10.4848 7.43071C10.7613 7.43071 11.2372 7.56648 12.3488 8.60951C13.6192 9.84631 13.828 10.4 14.5391 10.4H16.4087C16.9417 10.4 17.2117 10.1398 17.0564 9.62639C16.7009 8.54658 14.2982 6.32544 14.1899 6.17694Z"
+                    fill="#8A8B90" />
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-soc1al__item">
+              <a class="mobile-soc1al__link footer-soc1al__link" href="#" target="_blank">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.8011 3.26406C13.2715 1.74 11.2373 0.900308 9.07015 0.899414C4.60452 0.899414 0.970144 4.5163 0.968348 8.96175C0.967749 10.3828 1.34077 11.77 2.04978 12.9928L0.900391 17.1709L5.19528 16.0496C6.3787 16.6921 7.711 17.0306 9.06686 17.031H9.07025C13.5354 17.031 17.1702 13.4139 17.1719 8.96821C17.1728 6.81371 16.3308 4.78802 14.8011 3.26406ZM9.07015 15.6694H9.06736C7.85909 15.6689 6.67408 15.3457 5.64005 14.7352L5.39426 14.5899L2.84561 15.2553L3.52588 12.7823L3.36572 12.5288C2.69163 11.4618 2.33568 10.2285 2.33628 8.96225C2.33768 5.2673 5.35854 2.2612 9.07285 2.2612C10.8715 2.26179 12.5622 2.95976 13.8336 4.2265C15.1049 5.49324 15.8046 7.177 15.804 8.96771C15.8024 12.663 12.7818 15.6694 9.07015 15.6694ZM12.7638 10.6502C12.5614 10.5493 11.5661 10.062 11.3805 9.99471C11.1951 9.92747 11.06 9.89401 10.9252 10.0956C10.7901 10.2972 10.4023 10.7511 10.2841 10.8854C10.166 11.0199 10.048 11.0368 9.84552 10.9359C9.64305 10.8351 8.99082 10.6223 8.21754 9.93592C7.6158 9.40171 7.20955 8.74197 7.0914 8.54037C6.97345 8.33856 7.0904 8.24005 7.18022 8.12921C7.39936 7.85838 7.6188 7.57445 7.68625 7.44008C7.75381 7.30561 7.71998 7.18792 7.66929 7.08712C7.6188 6.98632 7.21395 5.99467 7.0453 5.59117C6.88084 5.19848 6.71409 5.25151 6.58975 5.24536C6.4718 5.2395 6.33679 5.23831 6.20177 5.23831C6.06685 5.23831 5.84751 5.28866 5.6619 5.49046C5.47639 5.69217 4.95349 6.1795 4.95349 7.17114C4.95349 8.16278 5.67887 9.12075 5.78005 9.25522C5.88124 9.38969 7.20756 11.4246 9.2382 12.2972C9.72119 12.5049 10.0982 12.6288 10.3923 12.7216C10.8773 12.875 11.3184 12.8533 11.6673 12.8015C12.0563 12.7436 12.8649 12.3141 13.0337 11.8435C13.2024 11.3729 13.2024 10.9696 13.1517 10.8854C13.1012 10.8014 12.9662 10.7511 12.7638 10.6502Z"
+                    fill="#8A8B90" />
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-soc1al__item">
+              <a class="mobile-soc1al__link footer-soc1al__link" href="#" target="_blank">
+                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M6.0971 8.31069L5.87378 11.5773C6.19329 11.5773 6.33166 11.4346 6.49761 11.2632L7.99558 9.77435L11.0995 12.1383C11.6688 12.4683 12.0699 12.2945 12.2234 11.5937L14.2609 1.66513L14.2614 1.66454C14.442 0.789386 13.9571 0.447162 13.4025 0.661856L1.42654 5.43017C0.609213 5.76011 0.621588 6.23395 1.2876 6.44865L4.34937 7.43905L11.4612 2.81114C11.7959 2.58065 12.1002 2.70818 11.8499 2.93866L6.0971 8.31069Z"
+                    fill="#8A8B90" />
+                </svg>
+              </a>
+            </li>
+            <li class="mobile-soc1al__item">
+              <a class="mobile-soc1al__link footer-soc1al__link" href="#" target="_blank">
+                <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.8315 10.174C17.3554 5.76458 16.5799 2.98077 15.181 1.72165L15.1817 1.72092C12.924 -0.429308 5.29903 -0.747562 2.59789 1.81749C1.38487 3.07222 0.957601 4.9137 0.910777 7.19343C0.863954 9.47388 0.80835 13.7458 4.78909 14.9047H4.79275L4.78909 16.6745C4.78909 16.6745 4.76202 17.3915 5.22001 17.5356C5.74385 17.7053 5.98089 17.3724 7.61021 15.4263C10.3348 15.6626 12.4272 15.1212 12.665 15.0422C13.2151 14.8579 16.3282 14.446 16.8315 10.174ZM7.87871 14.1811C7.87871 14.1811 6.15429 16.3313 5.61801 16.8896C5.44242 17.071 5.25001 17.0542 5.25293 16.6942C5.25293 16.4579 5.2661 13.756 5.2661 13.756C1.89115 12.7888 2.09015 9.15124 2.12673 7.2483C2.16331 5.34463 2.51156 3.78555 3.53875 2.73567C5.90846 0.513749 12.5933 1.01052 14.2965 2.6113C16.3787 4.45717 15.6375 9.67215 15.6419 9.84993C15.2139 13.4158 12.6913 13.6419 12.2275 13.7963C12.0292 13.8621 10.1892 14.3355 7.87871 14.1811Z"
+                    fill="#8A8B90" />
+                  <path
+                    d="M8.83332 3.15332C8.55165 3.15332 8.55165 3.59229 8.83332 3.59595C11.0187 3.61278 12.8184 5.13601 12.8382 7.93006C12.8382 8.2249 13.2698 8.22124 13.2662 7.9264H13.2655C13.242 4.91579 11.2769 3.17015 8.83332 3.15332Z"
+                    fill="#8A8B90" />
+                  <path
+                    d="M11.7077 7.4667C11.7012 7.75789 12.1321 7.77179 12.1357 7.47695C12.1716 5.8169 11.148 4.44951 9.22461 4.30538C8.94294 4.28489 8.91367 4.72752 9.19461 4.74801C10.8627 4.87458 11.7414 6.01298 11.7077 7.4667Z"
+                    fill="#8A8B90" />
+                  <path
+                    d="M11.2472 9.35596C10.8858 9.14672 10.5178 9.27694 10.3656 9.48253L10.0474 9.89443C9.88568 10.1037 9.58352 10.0759 9.58352 10.0759C7.37842 9.49277 6.78874 7.18525 6.78874 7.18525C6.78874 7.18525 6.76167 6.87284 6.96359 6.7053L7.36159 6.37608C7.56059 6.21805 7.68643 5.8376 7.48377 5.46375C6.94238 4.48557 6.57876 4.1483 6.39366 3.8893C6.19905 3.64567 5.9064 3.5908 5.60205 3.75542H5.59546C4.96261 4.12562 4.26977 4.81846 4.49145 5.53179C4.8697 6.28389 5.56473 8.68141 7.78008 10.4929C8.82117 11.3496 10.4688 12.2276 11.1682 12.4302L11.1748 12.4405C11.864 12.6702 12.5341 11.9503 12.8919 11.2984V11.2933C13.0507 10.978 12.998 10.6795 12.7661 10.4841C12.3549 10.0832 11.7345 9.64056 11.2472 9.35596Z"
+                    fill="#8A8B90" />
+                  <path
+                    d="M9.52527 5.93822C10.2284 5.97919 10.5693 6.34646 10.6059 7.10076C10.619 7.3956 11.047 7.37512 11.0339 7.08028C10.987 6.09551 10.4734 5.5468 9.54868 5.49558C9.26701 5.47876 9.24068 5.92139 9.52527 5.93822Z"
+                    fill="#8A8B90" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <a class="all-rights" href="#">© <time datetime="2023">2023</time> Все права защищены</a>
+        <a class="privacy-policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="catalog-desktop" id="catalogDesktop">
+    <div class="container">
+      <form class="catalog-desktop__close-button-wrapper" method="dialog">
+        <h2 class="categories__title">Категории биокаминов</h2>
+        <button class="catalog-desktop__close-button cross-button button" type="submit">Закрыть
+          <img class="cross-button-img" src="./images/icons/cross-button.svg" alt="">
+          <span class="visually-hidden">Закрыть каталог</span>
+        </button>
+      </form>
+      <div class="catalog-desktop__body-categories">
+        <ul class="catalog-desktop__list first-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Настольные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Напольные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Настенные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Встраиваемые</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Торцевые сквозные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Сквозные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Угловые</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Вертикальные</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list second-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Подвесные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Пристенные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Под телевизор</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Биокамины в стену</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Биокамины в мебель</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Биокамины в нишу</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">В порталах</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Автоматические</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list third-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Фронтальные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Каминные вставки</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Линейные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Торцевые</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Островные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Уличные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Широкие</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Переносные</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list fourth-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Для гостиной</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Для дома</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Для квартиры</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Для офиса</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Для ресторана</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Мраморные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Дизайнерские</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Без дымохода</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list fifth-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Элитные</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Недорогие</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Биотопливо и аксессуары</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Топки для биокаминов</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Порталы для биокаминов</a>
+          </li>
+        </ul>
+      </div>
+      <h3 class="series__title">Серии</h3>
+      <div class="catalog-desktop__body-series">
+        <ul class="catalog-desktop__list first-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Classic</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия D'elite</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Diamond</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list second-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Dipinto</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Estremità</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Finestra</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list third-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Estremità Finestra</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия L'angolo</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list fourth-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Minimal</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Taglio</a>
+          </li>
+        </ul>
+        <ul class="catalog-desktop__list fifth-column">
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Pierre luxe</a>
+          </li>
+          <li class="catalog-desktop__item">
+            <a class="catalog-desktop__link" href="listing.html">Серия Мarble</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+    <form class="mobile-overlay__close-button-wrapper" method="dialog">
+      <h2 class="mobile-overlay__title">Меню</h2>
+      <button class="mobile-overlay__close-button cross-button button" type="submit">
+        <span class="visually-hidden">Закрыть меню навигации</span>
+        <img src="./images/icons/cross-button.svg" alt="">
+      </button>
+    </form>
+    <div class="mobile-overlay__body">
+      <ul class="mobile-overlay__list">
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#" onclick="catalogDesktop.showModal()">Каталог
+            <img class="mobile-overlay__link-img" src="./images/icons/right-arrow.svg" alt="стрелка вправо"
+              loading="lazy">
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="toorder.html">На заказ
+            <img class="mobile-overlay__link-img" src="./images/icons/right-arrow.svg" alt="стрелка вправо"
+              loading="lazy">
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="about.html">О нас
+            <img class="mobile-overlay__link-img" src="./images/icons/right-arrow.svg" alt="стрелка вправо"
+              loading="lazy">
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="#">Наши работы
+            <img class="mobile-overlay__link-img" src="./images/icons/right-arrow.svg" alt="стрелка вправо"
+              loading="lazy">
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="collaboration.html">Сотрудничество
+            <img class="mobile-overlay__link-img" src="./images/icons/right-arrow.svg" alt="стрелка вправо"
+              loading="lazy">
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="where-buy.html">Где купить
+            <img class="mobile-overlay__link-img" src="./images/icons/right-arrow.svg" alt="стрелка вправо"
+              loading="lazy">
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link" href="contacts.html">Контакты
+            <img class="mobile-overlay__link-img" src="./images/icons/right-arrow.svg" alt="стрелка вправо"
+              loading="lazy">
+          </a>
+        </li>
+        <li class="mobile-overlay__item">
+          <a class="mobile-overlay__link favourites-link" href="#">Избранное
+            <img class="mobile-overlay__link-img mobile-flag-img" src="./images/icons/flag.svg" alt="флажок"
+              loading="lazy">
+            <img class="mobile-overlay__link-img mobile-star-img" src="./images/icons/star.svg" alt="звезда"
+              loading="lazy">
+          </a>
+        </li>
+      </ul>
+      <div class="mobile-overlay__footer">
+        <a class="mobile-overlay__logo" href="index.html">
+          <img class="mobile-overlay__logo-img" src="./images/logo/logo-medium.svg" alt="Логотип DecoFire" width="164"
+            height="44">
+        </a>
+        <h3 class="mobile-overlay__title-phone">+7 (495) 128-57-88</h3>
+        <a class="mobile-overlay__link-phone" href="tel:+74951285788">Позвонить</a>
+        <ul class="mobile-soc1al__list">
+          <li class="mobile-soc1al__item">
+            <a class="mobile-soc1al__link" href="#" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.00318 4.83998C6.70615 4.83998 4.84652 6.7016 4.84652 8.99656C4.84652 11.2936 6.70817 13.1531 9.00318 13.1531C11.3002 13.1531 13.1598 11.2915 13.1598 8.99656C13.1598 6.69958 11.2982 4.83998 9.00318 4.83998ZM9.00318 11.6945C7.5121 11.6945 6.3052 10.4869 6.3052 8.99656C6.3052 7.50619 7.51277 6.29863 9.00318 6.29863C10.4936 6.29863 11.7012 7.50619 11.7012 8.99656C11.7018 10.4869 10.4943 11.6945 9.00318 11.6945Z"
+                  fill="#8A8B90" />
+                <path
+                  d="M12.3404 0.950299C10.85 0.880775 7.15847 0.88415 5.66672 0.950299C4.35587 1.01172 3.19959 1.32829 2.26742 2.26045C0.709519 3.81832 0.908644 5.91754 0.908644 8.99616C0.908644 12.147 0.733144 14.1976 2.26742 15.7319C3.83139 17.2951 5.96102 17.0906 9.00325 17.0906C12.1244 17.0906 13.2017 17.0926 14.3054 16.6654C15.8059 16.0829 16.9385 14.7417 17.0492 12.3326C17.1194 10.8416 17.1154 7.15074 17.0492 5.65902C16.9156 2.81529 15.3894 1.0907 12.3404 0.950299ZM14.6996 14.7012C13.6783 15.7224 12.2615 15.6313 8.98367 15.6313C5.60867 15.6313 4.2553 15.6812 3.26777 14.691C2.13039 13.5591 2.33627 11.7413 2.33627 8.98536C2.33627 5.25605 1.95354 2.57027 5.69642 2.37857C6.55637 2.3482 6.8095 2.33807 8.97422 2.33807L9.0046 2.35832C12.6017 2.35832 15.4238 1.98168 15.5933 5.72382C15.6317 6.57768 15.6405 6.83417 15.6405 8.99548C15.6398 12.3313 15.7033 13.6927 14.6996 14.7012Z"
+                  fill="#8A8B90" />
+                <path
+                  d="M13.3244 5.64728C13.8608 5.64728 14.2957 5.21242 14.2957 4.67598C14.2957 4.13954 13.8608 3.70467 13.3244 3.70467C12.788 3.70467 12.3531 4.13954 12.3531 4.67598C12.3531 5.21242 12.788 5.64728 13.3244 5.64728Z"
+                  fill="#8A8B90" />
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-soc1al__item">
+            <a class="mobile-soc1al__link" href="#" target="_blank">
+              <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.1899 6.17694C13.9135 5.83044 13.9926 5.67629 14.1899 5.36656C14.1935 5.36302 16.4757 2.23321 16.7108 1.17179L16.7123 1.17108C16.8291 0.784271 16.7123 0.5 16.1472 0.5H14.2776C13.8016 0.5 13.5821 0.743964 13.4646 1.01692C13.4646 1.01692 12.5126 3.27836 11.166 4.74427C10.7313 5.16785 10.5304 5.30362 10.2931 5.30362C10.1763 5.30362 9.99458 5.16785 9.99458 4.78104V1.17108C9.99458 0.707193 9.86134 0.5 9.46732 0.5H6.52744C6.22889 0.5 6.05147 0.716386 6.05147 0.917921C6.05147 1.35776 6.72481 1.45889 6.79464 2.69639V5.38141C6.79464 5.96975 6.68704 6.07794 6.44835 6.07794C5.81278 6.07794 4.27016 3.80731 3.35599 1.20856C3.17145 0.704364 2.99118 0.500707 2.51165 0.500707H0.641272C0.107591 0.500707 0 0.744671 0 1.01763C0 1.4999 0.635572 3.89782 2.95555 7.06582C4.50173 9.22826 6.67921 10.4 8.66003 10.4C9.85065 10.4 9.99601 10.1398 9.99601 9.69215C9.99601 7.62588 9.88842 7.43071 10.4848 7.43071C10.7613 7.43071 11.2372 7.56648 12.3488 8.60951C13.6192 9.84631 13.828 10.4 14.5391 10.4H16.4087C16.9417 10.4 17.2117 10.1398 17.0564 9.62639C16.7009 8.54658 14.2982 6.32544 14.1899 6.17694Z"
+                  fill="#8A8B90" />
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-soc1al__item">
+            <a class="mobile-soc1al__link" href="#" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14.8011 3.26406C13.2715 1.74 11.2373 0.900308 9.07015 0.899414C4.60452 0.899414 0.970144 4.5163 0.968348 8.96175C0.967749 10.3828 1.34077 11.77 2.04978 12.9928L0.900391 17.1709L5.19528 16.0496C6.3787 16.6921 7.711 17.0306 9.06686 17.031H9.07025C13.5354 17.031 17.1702 13.4139 17.1719 8.96821C17.1728 6.81371 16.3308 4.78802 14.8011 3.26406ZM9.07015 15.6694H9.06736C7.85909 15.6689 6.67408 15.3457 5.64005 14.7352L5.39426 14.5899L2.84561 15.2553L3.52588 12.7823L3.36572 12.5288C2.69163 11.4618 2.33568 10.2285 2.33628 8.96225C2.33768 5.2673 5.35854 2.2612 9.07285 2.2612C10.8715 2.26179 12.5622 2.95976 13.8336 4.2265C15.1049 5.49324 15.8046 7.177 15.804 8.96771C15.8024 12.663 12.7818 15.6694 9.07015 15.6694ZM12.7638 10.6502C12.5614 10.5493 11.5661 10.062 11.3805 9.99471C11.1951 9.92747 11.06 9.89401 10.9252 10.0956C10.7901 10.2972 10.4023 10.7511 10.2841 10.8854C10.166 11.0199 10.048 11.0368 9.84552 10.9359C9.64305 10.8351 8.99082 10.6223 8.21754 9.93592C7.6158 9.40171 7.20955 8.74197 7.0914 8.54037C6.97345 8.33856 7.0904 8.24005 7.18022 8.12921C7.39936 7.85838 7.6188 7.57445 7.68625 7.44008C7.75381 7.30561 7.71998 7.18792 7.66929 7.08712C7.6188 6.98632 7.21395 5.99467 7.0453 5.59117C6.88084 5.19848 6.71409 5.25151 6.58975 5.24536C6.4718 5.2395 6.33679 5.23831 6.20177 5.23831C6.06685 5.23831 5.84751 5.28866 5.6619 5.49046C5.47639 5.69217 4.95349 6.1795 4.95349 7.17114C4.95349 8.16278 5.67887 9.12075 5.78005 9.25522C5.88124 9.38969 7.20756 11.4246 9.2382 12.2972C9.72119 12.5049 10.0982 12.6288 10.3923 12.7216C10.8773 12.875 11.3184 12.8533 11.6673 12.8015C12.0563 12.7436 12.8649 12.3141 13.0337 11.8435C13.2024 11.3729 13.2024 10.9696 13.1517 10.8854C13.1012 10.8014 12.9662 10.7511 12.7638 10.6502Z"
+                  fill="#8A8B90" />
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-soc1al__item">
+            <a class="mobile-soc1al__link" href="#" target="_blank">
+              <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M6.0971 8.31069L5.87378 11.5773C6.19329 11.5773 6.33166 11.4346 6.49761 11.2632L7.99558 9.77435L11.0995 12.1383C11.6688 12.4683 12.0699 12.2945 12.2234 11.5937L14.2609 1.66513L14.2614 1.66454C14.442 0.789386 13.9571 0.447162 13.4025 0.661856L1.42654 5.43017C0.609213 5.76011 0.621588 6.23395 1.2876 6.44865L4.34937 7.43905L11.4612 2.81114C11.7959 2.58065 12.1002 2.70818 11.8499 2.93866L6.0971 8.31069Z"
+                  fill="#8A8B90" />
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-soc1al__item">
+            <a class="mobile-soc1al__link" href="#" target="_blank">
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.8315 10.174C17.3554 5.76458 16.5799 2.98077 15.181 1.72165L15.1817 1.72092C12.924 -0.429308 5.29903 -0.747562 2.59789 1.81749C1.38487 3.07222 0.957601 4.9137 0.910777 7.19343C0.863954 9.47388 0.80835 13.7458 4.78909 14.9047H4.79275L4.78909 16.6745C4.78909 16.6745 4.76202 17.3915 5.22001 17.5356C5.74385 17.7053 5.98089 17.3724 7.61021 15.4263C10.3348 15.6626 12.4272 15.1212 12.665 15.0422C13.2151 14.8579 16.3282 14.446 16.8315 10.174ZM7.87871 14.1811C7.87871 14.1811 6.15429 16.3313 5.61801 16.8896C5.44242 17.071 5.25001 17.0542 5.25293 16.6942C5.25293 16.4579 5.2661 13.756 5.2661 13.756C1.89115 12.7888 2.09015 9.15124 2.12673 7.2483C2.16331 5.34463 2.51156 3.78555 3.53875 2.73567C5.90846 0.513749 12.5933 1.01052 14.2965 2.6113C16.3787 4.45717 15.6375 9.67215 15.6419 9.84993C15.2139 13.4158 12.6913 13.6419 12.2275 13.7963C12.0292 13.8621 10.1892 14.3355 7.87871 14.1811Z"
+                  fill="#8A8B90" />
+                <path
+                  d="M8.83332 3.15332C8.55165 3.15332 8.55165 3.59229 8.83332 3.59595C11.0187 3.61278 12.8184 5.13601 12.8382 7.93006C12.8382 8.2249 13.2698 8.22124 13.2662 7.9264H13.2655C13.242 4.91579 11.2769 3.17015 8.83332 3.15332Z"
+                  fill="#8A8B90" />
+                <path
+                  d="M11.7077 7.4667C11.7012 7.75789 12.1321 7.77179 12.1357 7.47695C12.1716 5.8169 11.148 4.44951 9.22461 4.30538C8.94294 4.28489 8.91367 4.72752 9.19461 4.74801C10.8627 4.87458 11.7414 6.01298 11.7077 7.4667Z"
+                  fill="#8A8B90" />
+                <path
+                  d="M11.2472 9.35596C10.8858 9.14672 10.5178 9.27694 10.3656 9.48253L10.0474 9.89443C9.88568 10.1037 9.58352 10.0759 9.58352 10.0759C7.37842 9.49277 6.78874 7.18525 6.78874 7.18525C6.78874 7.18525 6.76167 6.87284 6.96359 6.7053L7.36159 6.37608C7.56059 6.21805 7.68643 5.8376 7.48377 5.46375C6.94238 4.48557 6.57876 4.1483 6.39366 3.8893C6.19905 3.64567 5.9064 3.5908 5.60205 3.75542H5.59546C4.96261 4.12562 4.26977 4.81846 4.49145 5.53179C4.8697 6.28389 5.56473 8.68141 7.78008 10.4929C8.82117 11.3496 10.4688 12.2276 11.1682 12.4302L11.1748 12.4405C11.864 12.6702 12.5341 11.9503 12.8919 11.2984V11.2933C13.0507 10.978 12.998 10.6795 12.7661 10.4841C12.3549 10.0832 11.7345 9.64056 11.2472 9.35596Z"
+                  fill="#8A8B90" />
+                <path
+                  d="M9.52527 5.93822C10.2284 5.97919 10.5693 6.34646 10.6059 7.10076C10.619 7.3956 11.047 7.37512 11.0339 7.08028C10.987 6.09551 10.4734 5.5468 9.54868 5.49558C9.26701 5.47876 9.24068 5.92139 9.52527 5.93822Z"
+                  fill="#8A8B90" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <a class="post-link" href="mailto:info@firezo.ru">
+          <img class="post-link-img" src="./images/icons/post.svg" alt="почтовый конверт" width="11" height="12"
+            loading="lazy">
+          info@firezo.ru
+        </a>
+        <address class="mobile-overlay__address">
+          г. Москва, ул. Тимирязевская<br>
+          д 2/3 ТЦ Парк 11
+        </address>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="choose-fireplace" id="chooseFireplace">
+    <div class="choose-fireplace__wrapper">
+      <form class="choose-fireplace__close-button-wrapper" method="dialog">
+        <button class="choose-fireplace__close-button button" type="submit">
+          <span class="visually-hidden">Закрыть</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.36 15.7807L7.99997 9.4107L1.63997 15.7807L0.219971 14.3607L6.58997 8.0007L0.219971 1.6407L1.63997 0.220703L7.99997 6.5907L14.36 0.230703L15.77 1.6407L9.40997 8.0007L15.77 14.3607L14.36 15.7807Z" fill="#D2D2D2" />
+          </svg>
+        </button>
+      </form>
+      <div class="choose-fireplace__body">
+        <h2 class="choose-fireplace__title">Напишите свои габариты для расчета стоимости</h2>
+        <form class="choose-fireplace__form">
+          <label for="heightInput" class="visually-hidden">Высота в миллиметрах</label>
+          <input id="heightInput" type="number" class="choose-fireplace__input-height" placeholder="Высота, мм" required>
+
+          <label for="lengthInput" class="visually-hidden">Длина в миллиметрах</label>
+          <input id="lengthInput" type="number" class="choose-fireplace__input-length" placeholder="Длина, мм" required>
+
+          <label for="depthInput" class="visually-hidden">Глубина в миллиметрах</label>
+          <input id="depthInput" type="number" class="choose-fireplace__input-depth" placeholder="Глубина, мм" required>
+
+          <label for="chooseFireplaceCall" class="visually-hidden">Введите номер телефона</label>
+          <input id="chooseFireplaceCall" type="tel" class="choose-fireplace__input-call" placeholder="+7 (___)-___-__-__" required>
+
+          <label for="chooseFireplaceTextarea" class="visually-hidden">Оставьте комментарий</label>
+          <textarea name="chooseFireplaceComment" id="chooseFireplaceTextarea" class="choose-fireplace__textarea" placeholder="Комментарий"></textarea>
+        </form>
+        <div class="calculate-cost__button-wrapper">
+          <button name="submit" class="calculate-cost__button" type="submit" id="calculateCost" disabled="">Рассчитать стоимость</button>
+          <div class="form-chek calculate-cost__chek">
+            <input class="form-chek__input" type="checkbox" id="accept" onchange="document.getElementById('calculateCost').disabled = !this.checked">
+            <label for="accept">Нажимая на кнопку вы принимаете условия</label>
+            <a class="form-chek__input-link" href="#">пользовательского соглашения</a> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="cities" id="citiesList">
+    <div class="container">
+      <form class="cities__close-button-wrapper" method="dialog">
+        <h2 class="cities__title">Города</h2>
+        <button class="cities__close-button cross-button button" type="submit">Закрыть
+          <span class="visually-hidden">Закрыть меню навигации</span>
+          <img class="cities__close-button-img" src="./images/icons/cross-button.svg" alt="">
+        </button>
+      </form>
+      <div class="cities-wrapper">
+        <div class="cities-header">
+          <div class="cities-header__column">
+            <ul class="cities-capitals__list">
+              <li class="cities-capitals__item">
+                <a class="cities-capitals__link" href="#">Москва</a>
+              </li>
+              <li class="cities-capitals__item">
+                <a class="cities-capitals__link" href="#">Санкт-Петербург</a>
+              </li>
+              <li class="cities-capitals__item">
+                <a class="cities-capitals__link" href="#">Новосибирск</a>
+              </li>
+              <li class="cities-capitals__item">
+                <a class="cities-capitals__link" href="#">Екатеринбург</a>
+              </li>
+              <li class="cities-capitals__item">
+                <a class="cities-capitals__link" href="#">Казань</a>
+              </li>
+            </ul>
+          </div>
+          <div class="cities-header__column capitales-search">
+            <h3 class="capitales-search__title">По алфавиту</h3>
+            <ul class="capitales-search__list">
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales1">А</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales2">Б</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales3">в</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales4">Г</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales5">д</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales6">Е</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales7">Ж</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales8">З</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales9">И</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales10">К</a></li>
+            </ul>
+            <ul class="capitales-search__list">
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales11">Л</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales12">М</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales13">Н</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales14">О</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales15">П</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales16">Р</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales17">С</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales18">Т</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales19">У</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales20">Ф</a></li>
+            </ul>
+            <ul class="capitales-search__list">
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales21">Х</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales22">Ц</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales23">Ч</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales24">Ш</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales25">Щ</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales26">Э</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales27">Ю</a></li>
+              <li class="capitales-search__item"><a class="capitales-search__link" href="#capitales28">Я</a></li>
+            </ul>
+          </div>
+          <div class="cities-header__column cities-search">
+            <h3 class="cities-search__title">Поиск по городам</h3>
+            <form class="cities-search__form">
+              <label class="visually-hidden" for="citiesSearch">Cities search</label>
+              <input class="cities-search__input" type="text" id="citiesSearch" placeholder="|">
+            </form>
+          </div>
+        </div>
+        <div class="cities-body">
+          <div class="cities__row">
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales1">А</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales2">Б</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балаково</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балашиха</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Барнаул</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Батайск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Белгород</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Березники</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Бийск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Благовещенск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Брянск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales3">В</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Великий Новгород</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владивосток</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владикавказ</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владимир</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгоград</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгодонск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волжский</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Вологда</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Воронеж</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales4">Г</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales5">Д</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales6">Е</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балаково</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балашиха</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Барнаул</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Батайск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Белгород</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Березники</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Бийск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Благовещенск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Брянск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales7">Ж</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Великий Новгород</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владивосток</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владикавказ</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владимир</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгоград</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгодонск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волжский</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Вологда</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Воронеж</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales8">З</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales9">И</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales10">К</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балаково</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балашиха</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Барнаул</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Батайск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Белгород</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Березники</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Бийск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Благовещенск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Брянск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales11">Л</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Великий Новгород</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владивосток</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владикавказ</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владимир</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгоград</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгодонск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волжский</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Вологда</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Воронеж</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales12">М</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales13">Н</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales14">О</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балаково</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балашиха</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Барнаул</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Батайск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Белгород</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Березники</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Бийск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Благовещенск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Брянск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales15">П</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Великий Новгород</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владивосток</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владикавказ</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владимир</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгоград</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгодонск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волжский</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Вологда</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Воронеж</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales16">Р</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales17">С</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балаково</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балашиха</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Барнаул</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Батайск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Белгород</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Березники</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Бийск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Благовещенск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Брянск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales18">Т</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Великий Новгород</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владивосток</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владикавказ</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владимир</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгоград</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгодонск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волжский</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Вологда</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Воронеж</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales19">У</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales20">Ф</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales21">Х</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балаково</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балашиха</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Барнаул</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Батайск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Белгород</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Березники</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Бийск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Благовещенск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Брянск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales22">Ц</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Великий Новгород</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владивосток</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владикавказ</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владимир</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгоград</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгодонск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волжский</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Вологда</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Воронеж</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales23">Ч</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales24">Ш</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales25">Щ</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балаково</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Балашиха</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Барнаул</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Батайск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Белгород</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Березники</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Бийск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Благовещенск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Брянск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales26">Э</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Великий Новгород</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владивосток</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владикавказ</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Владимир</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгоград</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волгодонск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Волжский</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Вологда</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Воронеж</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales27">Ю</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="cities__cell">
+              <h3 class="cities__cell-title" id="capitales28">Я</h3>
+              <div class="cities__cell-body">
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Абакан</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Альметьевск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ангарск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Арзамас</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Армавир</a>
+                  </li>
+                </ul>
+                <ul class="cities__cell-list">
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Артём</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Архангельск</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Астрахань</a>
+                  </li>
+                  <li class="cities__cell-item">
+                    <a class="cities__cell-link" href="#">Ачинск</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
