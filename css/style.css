@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Inter';
-    src: url('../fonts/Inter/Inter-Light.woff2') format('woff2');
+    src: url('../fonts/Inter-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('../fonts/Inter/Inter-Regular.woff2') format('woff2');
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('../fonts/Inter/Inter-Medium.woff2') format('woff2');
+    src: url('../fonts/Inter-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('../fonts/Inter/Inter-SemiBold.woff2') format('woff2');
+    src: url('../fonts/Inter-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('../fonts/Inter/Inter-Bold.woff2') format('woff2');
+    src: url('../fonts/Inter-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -40,7 +40,7 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../fonts/Gotham/Gotham-XLight.woff2') format('woff2');
+    src: url('../fonts/Gotham-XLight.woff2') format('woff2');
     font-weight: 200;
     font-style: normal;
     font-display: swap;
@@ -48,7 +48,7 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../fonts/Gotham/Gotham-Light.woff2') format('woff2');
+    src: url('../fonts/Gotham-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -56,7 +56,7 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../fonts/Gotham/Gotham-Book.woff2') format('woff2');
+    src: url('../fonts/Gotham-Book.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -64,7 +64,7 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../fonts/Gotham/Gotham-Medium.woff2') format('woff2');
+    src: url('../fonts/Gotham-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -72,7 +72,7 @@
 
 @font-face {
     font-family: 'Gotham';
-    src: url('../fonts/Gotham/Gotham-Bold.woff2') format('woff2');
+    src: url('../fonts/Gotham-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
